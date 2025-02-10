@@ -13,6 +13,8 @@
   @include mixins.page-inline-padding;
   @include mixins.flex-column-gap(32px);
 
+  align-items: flex-start;
+
   @include mixins.on-tablet {
     @include mixins.flex-row-gap(0);
 
@@ -41,9 +43,10 @@
 
 .navigation {
   @include mixins.flex-row-gap(16px);
-  
+
   justify-content: center;
   align-items: center;
+  align-self: center;
   height: 32px;
   color: vars.$secondary-color;
 }

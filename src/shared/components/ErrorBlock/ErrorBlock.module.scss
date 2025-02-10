@@ -7,13 +7,14 @@
 
 .image {
   height: 50vh;
+  max-width: 100%;
   object-fit: contain;
   margin-inline: auto;
 }
 
 .reload {
   & > :last-child {
-    width: 10vw;
+    width: max(100px, 10vw);
     height: 48px;
   }
 }

@@ -1,7 +1,7 @@
 /* eslint-disable max-len */
 import cn from 'classnames';
 import { useSearchParams } from 'react-router-dom';
-import { useCallback, useMemo } from 'react';
+import { useCallback, useEffect, useMemo } from 'react';
 
 import { SortBy } from '../../types/SortBy';
 import { Filter } from '../Filter';

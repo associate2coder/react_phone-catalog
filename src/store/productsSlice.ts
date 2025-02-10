@@ -36,9 +36,9 @@ export const productsSlice = createSlice({
         state.items = action.payload;
       },
     );
-    builder.addCase(initProducts.rejected, state => {
+    builder.addCase(initProducts.rejected, (state, action) => {
       state.loaded = true;
-      state.error = 'Something went wrong!';
+      state.error = action.error.message || 'Something went wrong!';
     });
   },
 });
