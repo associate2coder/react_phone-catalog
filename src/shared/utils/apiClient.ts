@@ -1,4 +1,4 @@
-const BASE_URL = `${window.location.origin}/`;
+const BASE_URL = `${window.location.origin}${window.location.pathname}`;
 
 type RequestMethod = 'GET' | 'POST' | 'PATCH' | 'DELETE';
 
