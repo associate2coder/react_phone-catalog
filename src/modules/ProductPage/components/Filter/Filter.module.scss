@@ -1,0 +1,13 @@
+.filter {
+  @include mixins.flex-row-gap(16px);
+
+  // sort
+  & > :first-child {
+    max-width: 187px;
+  }
+
+  // pagination limit
+  & > :last-child {
+    max-width: 128px;
+  }
+}

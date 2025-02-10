@@ -1,0 +1,55 @@
+.specs {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  // Design flaw. Specs keys and values are too far apart.
+
+  // @include mixins.on-tablet {
+  //   padding-right: calc(100% - 640px);
+  // }
+
+  // @include mixins.on-desktop {
+  //   padding-right: 0;
+  // }
+}
+
+.specsProductCard {
+  padding-block: 8px;
+  max-width: 313px; // experiment
+}
+
+.titleWrapper {
+  color: vars.$primary-color;
+  display: grid;
+  row-gap: 16px;
+  padding-bottom: 30px;
+}
+
+.productCardText {
+  // mixin
+  font-size: 12px;
+  line-height: 15.34px;
+  font-weight: 500;
+}
+
+.productPageText {
+  // mixin
+  font-size: 14px;
+  line-height: 15.34px;
+  font-weight: 500;
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+}
+
+.key {
+  color: vars.$secondary-color;
+}
+
+.value {
+  text-align: right;
+  color: vars.$primary-color;
+}

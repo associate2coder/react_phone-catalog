@@ -1,0 +1,9 @@
+.favourites {
+  background-color: vars.$action-button-default-color;
+  border: vars.$action-button-default-border;
+
+  &:hover {
+    border: vars.$action-button-hover-border;
+    background-color: vars.$action-button-hover-color;
+  }
+}

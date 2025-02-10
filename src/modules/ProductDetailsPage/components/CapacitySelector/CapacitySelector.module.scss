@@ -1,0 +1,25 @@
+.selectorContainer {
+  @include mixins.flex-row-gap(8px);
+}
+
+.option {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 32px;
+  padding: 7px 8px 4px;
+
+  cursor: pointer;
+  text-decoration: none;
+
+  background-color: vars.$bg-color;
+  color: vars.$primary-color;
+  border: 1px solid vars.$icons-color;
+}
+
+.optionActive {
+  background-color: vars.$primary-color;
+  color: vars.$bg-color;
+  border: none;
+}

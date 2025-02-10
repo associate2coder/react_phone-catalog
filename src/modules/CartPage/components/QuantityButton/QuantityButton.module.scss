@@ -1,0 +1,9 @@
+.quantityButton {
+  background-color: vars.$action-button-default-color;
+  border: vars.$action-button-default-border;
+
+  &:hover {
+    background-color: vars.$action-button-hover-color;
+    border: vars.$action-button-hover-border;
+  }
+}

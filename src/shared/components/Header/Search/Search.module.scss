@@ -1,0 +1,65 @@
+.inputWrapper {
+  box-shadow: -1px 1px 0 0 vars.$elements-color;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding-inline: 8px;
+
+  transition: width 0.6s ease, opacity 0.6s ease;
+}
+
+.active {
+  width: auto;
+  opacity: 1;
+  visibility: visible;
+}
+
+.inactive {
+  width: 0;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.input {
+  height: 100%;
+  width: 100%;
+  border: none;
+  background-color: vars.$bg-color;
+  color: vars.$secondary-color;
+
+  padding-right: 8px;
+
+  &::placeholder {
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: 400;
+    letter-spacing: 0;
+    color: vars.$icons-color;
+  }
+
+  &:focus,
+  &:active,
+  &:hover {
+    border: none;
+    outline: none;
+  }
+
+}
+
+.icon {
+  left: 0;
+  top: 32px;
+  height: 16px;
+  aspect-ratio: 1 / 1;
+  color: vars.$primary-color;
+}
+
+.hasNoSpace {
+  position: absolute;
+  top: 49px;
+  right: 0;
+  height: 49px;
+  width: 100%;
+  box-shadow: 0 1px 0 1px vars.$elements-color;
+
+}

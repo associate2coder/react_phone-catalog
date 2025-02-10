@@ -1,0 +1,88 @@
+@import './variables';
+@import './fonts';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: background-color 0.5s ease, color 0.5s ease, border-color 0.5s ease;
+}
+
+html {
+  font-family: Mont, Arial, Helvetica, sans-serif;
+  cursor: url('/cursor.svg') 8 8, auto;
+}
+
+// extend h1-h4 styles
+@for $i from 1 through 4 {
+  h#{$i} {
+    @extend %h#{$i}
+  }
+}
+
+button {
+  border: none;
+}
+
+.divider {
+  height: 1px;
+  width: 100%;
+  background-color: var(--elements-color);
+}
+
+.page {
+  display: grid;
+
+  @include mixins.grid-template-columns-4-12-24;
+
+  column-gap: 16px;
+  padding-top: 24px;
+}
+
+.icon {
+  height: 16px;
+  width: 16px;
+}
+
+.hidden {
+  display: none;
+}
+
+.button {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.square-button {
+  height: 100%;
+  aspect-ratio: 1 / 1;
+
+  &:has(.icon) {
+    &:not(.no-animation):hover > .icon {
+      @include mixins.pulse-animation;
+    }
+  }
+}
+
+.not-found-text {
+  @extend %h4;
+  
+  margin-block: 24px;
+  color: vars.$secondary-color;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+

@@ -1,0 +1,101 @@
+.container {
+  aspect-ratio: 1 / 1;
+  display: grid;
+  row-gap: 8px;
+
+  @include mixins.on-tablet {
+    aspect-ratio: unset;
+    height: 100%;
+  }
+}
+
+.sliderWrapper {
+  display: grid;
+  column-gap: 16px;
+
+  @include mixins.grid-template-columns-4-12-24;
+}
+
+.slider {
+  position: relative;
+
+  overflow: hidden;
+  display: flex;
+  flex-wrap: nowrap;
+
+  grid-column: 1 / -1;
+
+
+  @include mixins.on-tablet {
+    grid-column: 2 / 12;
+  }
+
+  @include mixins.on-desktop {
+    grid-column: 2 / 24;
+  }
+}
+
+.sliderNavigationButton {
+  display: none;
+  cursor: pointer;
+  height: 100%;
+
+  @include mixins.on-tablet {
+    grid-column: span 1;
+
+    display: flex;
+    border: 1px solid vars.$icons-color;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.link {
+  grid-column: span 1;
+  display: flex;
+  flex-wrap: nowrap;
+  width: 100%;
+  object-fit: contain;
+
+  @include mixins.on-tablet {
+    aspect-ratio: 2.6 / 1;
+  }
+}
+
+// .banner {
+//   grid-column: span 1;
+//   display: flex;
+//   flex-wrap: nowrap;
+//   width: 100%;
+//   object-fit: contain;
+// }
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+}
+
+.button {
+  width: 24px;
+  aspect-ratio: 1 / 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.icon {
+  width: 14px;
+  height: 4px;
+  background-color: vars.$elements-color;
+}
+
+.iconActive {
+  background-color: vars.$primary-color;
+}
+
+.hidden {
+  display: none;
+}

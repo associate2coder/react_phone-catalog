@@ -1,0 +1,60 @@
+.productOptions {
+  display: grid;
+  row-gap: 32px;
+}
+
+.selectors {
+  display: grid;
+  row-gap: 24px;
+}
+
+.purchase {
+  display: grid;
+  row-gap: 32px;
+
+  & :global(.button) {
+    height: 48px;
+
+    &:first-child {
+      width: 100%;
+    }
+  }
+}
+
+.block {
+  display: flex;
+  flex-direction: column;
+
+  .selectors > & {
+    gap: 8px;
+  }
+
+  .purchase > & {
+    gap: 16px;
+  }
+
+  &:has(.id) {
+    position: relative;
+  }
+}
+
+.blockTitle {
+  text-align: start;
+  color: vars.$secondary-color;
+
+  @include mixins.small-text-12;
+}
+
+.id {
+  position: absolute;
+  
+  top: 0;
+  right: 0;
+  color: vars.$icons-color;
+
+  @include mixins.small-text-12;
+
+  @include mixins.on-desktop {
+    right: -192px;
+  }
+}

@@ -1,0 +1,39 @@
+.settings {
+  position: absolute;
+  padding: 16px;
+
+  @include mixins.responsive-property('top', 49px, 49px, 65px);
+  @include mixins.responsive-property('right', 0, 52px, 80px);
+  @include mixins.flex-column-gap(8px);
+
+  border: vars.$border-elements;
+  background-color: vars.$bg-color;
+
+  max-height: 0;
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(0);
+  transform-origin: top;
+  transition:
+    max-height 0.3s ease-out,
+    opacity 0.3s ease-out,
+    transform 0.3s ease-out,
+    visibility 0s linear 0.3s;
+}
+
+.settingsActive {
+  height: 1000px;
+  max-height: fit-content;
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+  transition:
+    max-height 0.3s ease-out,
+    opacity 0.3s ease-out,
+    transform 0.3s ease-out,
+    visibility 0s linear;}
+
+.row {
+  @include mixins.responsive-property('height', 48px, 48px, 64px);
+  @include mixins.flex-row-gap(8px);
+}

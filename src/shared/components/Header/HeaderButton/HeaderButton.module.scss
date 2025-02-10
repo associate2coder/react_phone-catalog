@@ -1,0 +1,35 @@
+.headerButton {
+  // same as in navButton
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  aspect-ratio: 1 / 1;
+  background-color: vars.$bg-color;
+
+  &:not(.selected):hover {
+    background-color: vars.$action-button-hover-color;
+  }
+}
+
+.hasShadow {
+  box-shadow: -1px 1px 0 0 vars.$elements-color;
+}
+
+.hasBorder {
+  border: vars.$action-button-default-border;
+
+  &:is(.selected) {
+    border: vars.$primary-color;
+  }
+  
+  &:not(.selected):hover {
+    border: vars.$action-button-hover-border;
+  }
+}
+
+.selected {
+  background-color: vars.$elements-color;
+  cursor: inherit !important;
+}

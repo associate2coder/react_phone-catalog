@@ -1,0 +1,17 @@
+.favourites {
+  @include mixins.page-inline-padding;
+  @include mixins.responsive-property('row-gap', 32px, 40px, 40px);
+
+  & > * {
+    grid-column: 1 / -1;
+  }
+}
+
+.pageHeader {
+  @include mixins.flex-column-gap(24px);
+  @include mixins.responsive-property('gap', 24px, 40px, 40px);
+}
+
+.modelCount {
+  @include mixins.responsive-property('margin-top', -16px, -32px, -32px);
+}

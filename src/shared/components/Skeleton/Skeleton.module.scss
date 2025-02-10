@@ -1,0 +1,23 @@
+.skeleton {
+  background: linear-gradient(
+    90deg,
+    vars.$elements-color 25%,
+    vars.$elements-color 50%,
+    vars.$elements-color 75%
+  );
+  background-size: 200% 100%; // Allows animation movement
+  background-repeat: no-repeat;
+  animation: pulse 1.5s infinite linear;
+}
+
+.square {
+  aspect-ratio: 1 / 1;
+  margin-inline: auto;
+}
+
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.5; }
+  100% { opacity: 1; }
+}
+

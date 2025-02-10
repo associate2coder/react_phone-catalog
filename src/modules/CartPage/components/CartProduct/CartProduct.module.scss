@@ -1,0 +1,92 @@
+.item {
+  grid-column: 1 / -1;
+
+  padding: 16px;
+  border: vars.$product-card-border;
+  background-color: vars.$product-card-bg-color;
+
+  @include mixins.flex-column-gap(16px);
+  @include mixins.width-height(100%, 160px);
+
+  @include mixins.on-tablet {
+    flex-direction: row;
+    gap: 24px;
+  }
+}
+
+.deleteBtn {
+  & > .button {
+    background-color: vars.$product-card-bg-color;
+  }
+}
+
+.block {
+  display: flex;
+
+  // product info block
+  &:first-child {
+    gap: 16px;
+    align-items: center;
+    width: 100%;
+  }
+
+  // selection / price block
+  &:last-child {
+    align-items: center;
+    justify-content: space-between;
+
+    @include mixins.on-tablet {
+      gap: 24px;
+    }
+  }
+}
+
+.imageWrapper {
+  padding: 7px;
+  height: 80px;
+  aspect-ratio: 1 / 1;
+
+  flex-grow: 0;
+
+  display: flex;
+  justify-content: center;
+}
+
+.image {
+  object-fit: contain;
+  height: 100%;
+
+  @include mixins.scale-image-animation;
+}
+
+.title {
+  text-decoration: none;
+  color: vars.$primary-color;
+}
+
+.quantityWrapper {
+  height: 32px;
+  display: flex;
+
+  & > * {
+    width: 32px;
+    aspect-ratio: 1 / 1;
+  }
+}
+
+.quantity {
+  border: none;
+  outline: none;
+  text-align: center;
+  background-color: vars.$product-card-bg-color;
+  color: vars.$primary-color;
+}
+
+.price {
+  color: vars.$primary-color;
+  width: 80px;
+  
+  text-align: right;
+
+  @extend %h3;
+}

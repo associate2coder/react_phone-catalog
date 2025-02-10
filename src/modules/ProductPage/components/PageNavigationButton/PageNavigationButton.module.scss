@@ -1,0 +1,20 @@
+.pageNavigationButton {
+  background-color: vars.$action-button-default-color;
+  border: vars.$action-button-default-border;
+
+  &:not(.inactive):hover {
+    border: vars.$action-button-hover-border;
+    background-color: vars.$action-button-hover-color;
+  }
+}
+
+.inactive {
+  background-color: vars.$action-button-inactive-color;
+  border: vars.$action-button-inactive-border;
+  color: vars.$icons-color;
+  cursor: inherit;
+
+  &:is(:hover, :active, :focus, :focus-visible, :focus-within) {
+    cursor: inherit;
+  }
+}

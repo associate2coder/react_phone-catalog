@@ -1,0 +1,40 @@
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @include mixins.on-tablet {
+    margin-right: 24px;
+  }
+
+  & :global(.header),
+  & :global(.menu) {
+    width: 96px;
+    height: 48px;
+
+    @include mixins.on-desktop {
+      width: 128px;
+      height: 64px;
+    }
+  }
+
+  & :global(.footer) {
+    padding: 0;
+    width: 89px;
+    height: 32px;
+  }
+}
+
+
+.image {
+  display: inline-block;
+  object-fit: cover;
+
+  width: 64px;
+  height: 22px;
+
+  @include mixins.on-desktop {
+    width: 80px;
+    height: 28px;
+  }
+}

@@ -46,6 +46,17 @@ module.exports = {
       ignoreTemplateLiterals: true,
       ignoreComments: true,
     }],
+    'import/no-extraneous-dependencies': [
+      'error',
+      {
+        devDependencies: [
+          '**/*.test.{ts,tsx,js,jsx}', // Allow devDependencies in test files
+          '**/*.spec.{ts,tsx,js,jsx}', // Allow devDependencies in spec files
+          'cypress/**', // Allow Cypress-specific files
+          'vite.config.ts', // Allow Vite config in devDependencies
+        ],
+      },
+    ],
     'no-redeclare': [2, { builtinGlobals: true }],
     'no-console': 2,
     'operator-linebreak': 0,

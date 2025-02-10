@@ -1,0 +1,6 @@
+
+.columnWrapper {
+  width: 100%;
+  
+  @include mixins.flex-column-gap(10px);
+}

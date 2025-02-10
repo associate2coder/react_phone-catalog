@@ -1,0 +1,50 @@
+.slider {
+  grid-column: 1 / -1; // move to product page css
+  overflow: hidden;
+
+  @include mixins.flex-column-gap(16px);
+}
+
+.header {
+  height: 64px;
+  max-height: fit-content;
+  color: vars.$primary-color;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.buttonsContainer {
+  height: 32px;
+
+  @include mixins.flex-row-gap(8px);
+}
+
+.content {
+  position: relative;
+  overflow:scroll;
+  width: 100%;
+}
+
+.productContainer {
+  overflow: hidden;
+  width: 100%;
+
+  @include mixins.flex-row-gap(16px); // Space between product cards
+
+  & > * {
+    flex: 0 0 calc((100% / 4 * 3) - 16px); // Each card takes up 3 out of 4 columns
+    max-width: calc((100% / 4 * 3) - 16px);
+
+    @include mixins.on-tablet {
+      flex: 0 0 calc((100% / 12 * 5) - 16px); // Each card takes up 5 out of 12 columns
+      max-width: calc((100% / 12 * 5) - 16px);
+    }
+
+    @include mixins.on-desktop {
+      flex: 0 0 calc(25% - 12px); // each card takes up 1/3 of the viewport width
+      max-width: calc(25% - 12px);
+    }
+  }
+}

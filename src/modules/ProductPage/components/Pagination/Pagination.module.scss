@@ -1,0 +1,16 @@
+.pagination {
+  height: 32px;
+  justify-content: center;
+
+  @include mixins.flex-row-gap(16px);
+
+  & > * {
+    height: 32px;
+  }
+}
+
+.pageButtonsContainer {
+  justify-content: center;
+
+  @include mixins.flex-row-gap(8px);
+}

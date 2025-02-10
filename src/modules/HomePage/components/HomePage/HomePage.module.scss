@@ -1,0 +1,105 @@
+.homePage {
+  display: grid;
+  row-gap: 56px;
+  overflow-x: hidden;
+
+  @include mixins.page-inline-padding;
+
+  & > * {
+    grid-column: 1 / -1;
+
+    @include mixins.on-desktop {
+      grid-column: span 24;
+    }
+  }
+
+  // Banner slider
+  & > :first-child {
+    margin-inline: -16px;
+    width: calc(100% + 32px);
+
+    @include mixins.on-tablet {
+      margin-inline: 0;
+      width: 100%;
+    }
+  }
+}
+
+.header {
+  width: 100%;
+
+  @include mixins.flex-column-gap(24px);
+}
+
+.title {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+.welcome {
+  color: vars.$primary-color;
+
+  @extend %h1;
+}
+
+.categories {
+  display: grid;
+  gap: 32px 16px; // shorthand: row-gap column-gap
+  color: vars.$primary-color;
+
+  @include mixins.grid-template-columns-4-12-24;
+
+  & > :first-child {
+    grid-column: 1 / -1;
+    margin-bottom: -8px;
+  }
+
+  & > *:not(:first-child) {
+    grid-column: 1 / -1;
+
+    @include mixins.on-tablet {
+      grid-column: span 4;
+    }
+
+    @include mixins.on-desktop {
+      grid-column: span 8;
+    }
+  }
+}
+
+.categoryWrapper {
+  width: 100%;
+
+  @include mixins.flex-column-gap(24px);
+}
+
+.categoryImageLink {
+  padding-left: 10%;
+  padding-top: 10%;
+  text-decoration: none;
+
+  @include mixins.width-height(100%, 100%);
+
+  // image
+  & > :first-child {
+    object-fit: contain;
+
+    @include mixins.width-height(100%, 100%);
+  }
+}
+
+.categoryInfo {
+  @include mixins.flex-column-gap(4px);
+
+  // category name
+  & > :first-child {
+    text-decoration: none;
+    color: vars.$primary-color;
+  }
+
+  // model count
+  & > :last-child {
+    color: vars.$secondary-color;
+  }
+}

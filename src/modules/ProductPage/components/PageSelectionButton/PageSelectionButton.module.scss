@@ -1,0 +1,25 @@
+.pageSelectionButton {
+  background-color: vars.$product-card-bg-color;
+  border: vars.$border-icons;
+  color: vars.$primary-color;
+
+  &:not(.inactive):hover {
+    border: vars.$action-button-hover-border;
+  }
+}
+
+.selected {
+  background-color: vars.$contrast-button-color;
+  color: vars.$white-color;
+}
+
+.inactive {
+  background-color: vars.$bg-color;
+  color: vars.$icons-color;
+  border: vars.$border-elements;
+  cursor: inherit;
+
+  &:is(:hover, :active, :focus, :focus-visible, :focus-within) {
+    cursor: inherit;
+  }
+}

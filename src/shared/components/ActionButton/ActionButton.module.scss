@@ -1,0 +1,30 @@
+.deleteButton {
+  background-color: vars.$product-card-bg-color;
+}
+
+.scrollUpButton {
+  background-color: vars.$action-button-default-color;
+  border: vars.$action-button-default-border;
+
+  &:hover {
+    background-color: vars.$action-button-hover-color;
+    border: vars.$action-button-hover-border;
+  }
+}
+
+.leftButton,
+.rightButton {
+  background-color: vars.$action-button-default-color;
+  border: vars.$action-button-default-border;
+
+  &:not(.inactive):hover {
+    background-color: vars.$action-button-hover-color;
+    border: vars.$action-button-hover-border;
+  }
+}
+
+.inactive {
+  background-color: vars.$action-button-inactive-color;
+  border: vars.$action-button-inactive-border;
+  cursor: inherit;
+}

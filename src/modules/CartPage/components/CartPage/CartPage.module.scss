@@ -1,0 +1,107 @@
+.cartPage {
+  width: 100%;
+  
+  @include mixins.page-inline-padding;
+
+  // settings for grid layout
+  row-gap: 32px;
+
+  & > * {
+    // both for mobile and tablet
+    grid-column: 1 / -1;
+  }
+
+  @include mixins.on-desktop {
+    display: grid;
+    grid-template-columns: repeat(24, 32px);
+    column-gap: 16px;
+
+    // header
+    & > :first-child {
+      grid-column: 1 / -1;
+    }
+
+    // items list
+    & > :nth-child(2):not(:global(.error)) {
+      grid-column: 1 / 17;
+    }
+
+    // checkout
+    & > :nth-child(3):not(:global(.error)) {
+      grid-column: 17 / 25;
+    }
+  }
+
+}
+
+.pageHeader {
+  display: flex;
+  flex-direction: column;
+
+  @include mixins.responsive-property('gap', 24px, 40px, 40px);
+}
+
+.pageTitle {
+  color: vars.$primary-color;
+}
+
+.itemList {
+  @include mixins.flex-column-gap(16px);
+}
+
+.checkout {
+  padding: 24px;
+  border: vars.$border-elements;
+  max-height: fit-content;
+
+  @include mixins.flex-column-gap(16px);
+
+  // center checkout button
+  & > :last-child {
+    height: 48px;
+    width: 100%;
+    max-width: 544px;
+    margin-inline: auto;
+  }
+}
+
+.total {
+  justify-content: center;
+  align-items: center;
+
+  @include mixins.flex-column-gap;
+}
+
+.sum {
+  color: vars.$primary-color;
+
+  @extend %h2;
+}
+
+.totalItems {
+  color: vars.$secondary-color;
+}
+
+.buttons {
+  justify-content: center;
+  margin-top: 16px;
+
+  @include mixins.flex-row-gap(16px);
+
+  & > * {
+    width: 80px;
+    height: 48px;
+  }
+}
+
+.confirmationModal {
+  padding-block: 32px;
+  background-color: vars.$bg-color;
+  color: vars.$primary-color;
+
+  @include mixins.flex-column-gap(16px);
+  @include mixins.page-inline-padding;
+
+  border: vars.$footer-border;
+  box-shadow: vars.$footer-shadow;
+}

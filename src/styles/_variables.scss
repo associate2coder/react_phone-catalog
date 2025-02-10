@@ -1,0 +1,184 @@
+// media width
+$tablet-min-width: 640px;
+$desktop-min-width: 1200px;
+
+%light-theme-variables {
+  --primary-color: #313237; // headers, text, price
+  --secondary-color: #89939A; // specs, discount
+  --icons-color: #B4BDC3;
+  --elements-color: #E2E6E9;
+  --bg-color: #fff;
+  --white-color: #fff;
+
+  // TODO create structure in variables
+  --contrast-button-color: var(--primary-color);
+  --active-button-color: var(--bg-color);
+
+  // TODO create structure in variables
+  --product-card-bg-color: var(--bg-color);
+  --product-card-border: 1px solid var(--elements-color);
+  
+  // TODO create structure in variables
+  --border-icons: 1px solid var(--icons-color);
+
+  // purchase button
+  --purchase-button-default-bgcolor: var(--primary-color);
+  --purchase-button-hover-bgcolor: var(--primary-color);
+  --purchase-button-selected-bgcolor: var(--bg-color);
+  --purchase-button-contast-color: var(--white-color);
+  --purchase-button-selected-color: #27AE60;
+
+  // Action buttons
+  --action-button-default-color: var(--bg-color);
+  --action-button-hover-color: var(--bg-color);
+  --action-button-inactive-color: var(--bg-color);
+  --action-button-default-border: 1px solid var(--icons-color);
+  --action-button-hover-border: 1px solid var(--primary-color);
+  --action-button-inactive-border: 1px solid var(--elements-color);
+
+  // dropdown
+  --dropdown-default-bg-color: var(--bg-color);
+  --dropdown-default-border: 1px solid var(--icons-color);
+  --dropdown-hover-border: 1px solid var(--secondary-color);
+  --dropdown-focus-border: 1px solid var(--primary-color);
+
+  // TODO create structure in variables
+  --back-link-color: var(--secondary-color);
+  --primary-color-light: hsl(0deg, 0%, 40%); // Slightly lighter black
+
+  // TODO create structure in variables
+  --nav-btn-shadow-color: var(--elements-color);
+
+    // TODO create structure in variables
+  --footer-nav-links-color: var(--secondary-color);
+  --footer-border: none;
+  --footer-shadow: 0px -1px 0px 0px var(--elements-color);
+
+  // TODO create structure in variables
+  --mix-blend-mode: color-dodge;
+}
+
+%dark-theme-variables {
+  --surface2-color: #323542; // background for active buttons
+  --surface1-color: #161827;
+
+  // TODO create structure in variables
+  --secondary-color: #75767F; // specs, discount
+  --icons-color: #4A4D58;
+  --elements-color: #3B3E4A;
+  --accent-color: #905BFF;
+  --white-color: #F1F2F9; // headers, text, price
+  --primary-color: var(--white-color);
+  --bg-color: #0F1121; // background
+
+  // TODO create structure in variables
+  --contrast-button-color: var(--accent-color);
+  --active-button-color: var(--surface2-color);
+
+  // TODO create structure in variables
+  --product-card-bg-color: var(--surface1-color);
+  --product-card-border: none;
+
+  // TODO create structure in variables
+  --border-icons: none;
+
+  // purchase buttos
+  --purchase-button-default-bgcolor: var(--accent-color);
+  --purchase-button-hover-bgcolor: #A378FF;
+  --purchase-button-selected-bgcolor: var(--surface2-color);
+  --purchase-button-contast-color: var(--white-color);
+  --purchase-button-selected-color: var(--white-color);
+
+  // action buttons (fav buttons, page navigation buttons)
+  --action-button-default-color: var(--surface2-color);
+  --action-button-hover-color: var(--icons-color);
+  --action-button-inactive-color: var(--bg-color);
+  --action-button-default-border: none;
+  --action-button-hover-border: none;
+  --action-button-inactive-border: 1px solid var(--elements-color);
+
+  // dropdown
+  --dropdown-default-bg-color: var(--surface2-color);
+  --dropdown-default-border: 1px solid var(--surface2-color);
+  --dropdown-hover-border: 1px solid var(--icons-color);
+  --dropdown-focus-border: 1px solid var(--accent-color);
+
+  // TODO create structure in variables
+  --back-link-color: var(--white-color);
+  --primary-color-light: hsl(0deg, 0%, 80%); // Slightly darker white
+
+  // TODO create structure in variables
+  --nav-btn-shadow-color: var(--surface2-color);
+
+  // TODO create structure in variables
+  --footer-nav-links-color: var(--primary-color);
+  --footer-border: 1px solid var(--elements-color);
+  --footer-shadow: none;
+
+  // TODO create structure in variables
+  --mix-blend-mode: color-burn;
+}
+
+// TODO create structure in variables
+$primary-color: var(--primary-color); // headers, text, price
+$secondary-color: var(--secondary-color); // specs, discount
+$icons-color: var(--icons-color);
+$elements-color: var(--elements-color);
+$bg-color: var(--bg-color);
+$white-color: var(--white-color);
+$accent-color: var(--accent-color);
+
+// TODO create structure in variables
+$contrast-button-color: var(--contrast-button-color);
+$active-button-color: var(--active-button-color);
+
+// TODO create structure in variables
+$product-card-bg-color: var(--product-card-bg-color);
+$product-card-border: var(--product-card-border);
+
+// TODO create structure in variables
+$border-icons: var(--border-icons);
+$border-elements: 1px solid $elements-color;
+
+// purchase buttos
+$purchase-button-default-bgcolor: var(--purchase-button-default-bgcolor);
+$purchase-button-hover-bgcolor: var(--purchase-button-hover-bgcolor);
+$purchase-button-selected-bgcolor: var(--purchase-button-selected-bgcolor);
+$purchase-button-contast-color: var(--purchase-button-contast-color);
+$purchase-button-selected-color: var(--purchase-button-selected-color);
+
+// action buttons
+$action-button-default-color: var(--action-button-default-color);
+$action-button-hover-color: var(--action-button-hover-color);
+$action-button-inactive-color: var(--action-button-inactive-color);
+$action-button-default-border: var(--action-button-default-border);
+$action-button-hover-border: var(--action-button-hover-border);
+$action-button-inactive-border: var(--action-button-inactive-border);
+
+// dropdown
+$dropdown-default-bg-color: var(--dropdown-default-bg-color);
+$dropdown-default-border: var(--dropdown-default-border);
+$dropdown-hover-border: var(--dropdown-hover-border);
+$dropdown-focus-border: var(--dropdown-focus-border);
+
+// TODO create structure in variables
+$back-link-color: var(--back-link-color);
+$primary-color-light: hsl(0deg, 0%, 40%);
+
+// TODO create structure in variables
+$nav-btn-shadow-color: var(--nav-btn-shadow-color);
+
+// TODO create structure in variables
+$footer-nav-links-color: var(--footer-nav-links-color);
+$footer-border: var(--footer-border);
+$footer-shadow: var(--footer-shadow);
+
+// TODO create structure in variables
+$mix-blend-mode: var(--mix-blend-mode);
+
+// colors general
+$green-color: #27AE60;
+$red-color: #EB5757;
+
+// animations
+$scale-duration: 0.3s;

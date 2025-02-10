@@ -1,0 +1,91 @@
+.navBar {
+  background-color: vars.$bg-color;
+}
+
+.navList {
+  height: 100%;
+  list-style: none;
+  display: flex;
+  gap: 32px;
+
+  @include mixins.on-desktop {
+    gap: 64px;
+  }
+}
+
+:global(.App__main) .navList {
+  @include mixins.page-inline-padding;
+
+  padding-top: 24px;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  gap: 16px;
+
+  & > * {
+    padding-block: 8px;
+  }
+}
+
+.navItem {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.navLink {
+  height: 100%;
+  display: flex;
+  align-items: center;
+
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 12px;
+  line-height: 11px;
+  letter-spacing: 0.04em;
+  font-weight: 800;
+
+  color: vars.$secondary-color;
+
+  &:hover {
+    color: vars.$primary-color;
+  }
+}
+
+.navLinkUnderscore {
+  position: relative;
+  transition: all 0.3s;
+
+  &::after {
+    content: '';
+    height: 3px;
+    background-color: vars.$primary-color;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+
+    transform: scaleX(0);
+    transform-origin: 0% 50%;
+  }
+}
+
+.navLinkActive {
+  color: vars.$primary-color;
+  transition: all 0.3s;
+
+  &:hover {
+    cursor: inherit;
+  }
+
+  &:has(:global(.icon)):hover :global(.icon) {
+    animation-name: unset;
+    transform: none;
+  }
+
+  &::after {
+    transform: scaleX(1);
+    transition: transform 0.3s ease;
+  }
+}

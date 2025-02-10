@@ -1,0 +1,17 @@
+.selectorContainer {
+  @include mixins.flex-row-gap(10px);
+}
+
+.option {
+  height: 30px;
+  aspect-ratio: 1 / 1;
+
+  cursor: pointer;
+  border: 2px solid vars.$bg-color;
+  border-radius: 50%;
+  box-shadow: 0 0 0 1px vars.$elements-color;
+}
+
+.optionActive {
+  box-shadow: 0 0 0 1px vars.$primary-color;
+}

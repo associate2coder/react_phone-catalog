@@ -1,0 +1,38 @@
+.header {
+  height: 48px;
+  position: sticky;
+  top: 0;
+  background-color: vars.$bg-color;
+  z-index: 2;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  box-shadow: 0 1px 0 0 vars.$elements-color;
+
+  @include mixins.on-desktop {
+    height: 64px;
+  }
+}
+
+.headerWrapper {
+  display: flex;
+  height: 100%;
+  width: fit-content;
+  position: relative;
+
+  &:has(:global(.logo)) {
+    & > :first-child {
+      padding: 13px 16px;
+
+      @include mixins.on-desktop {
+        padding: 18px 24px;
+      }
+    }
+  }
+}
+
+.buttonRow {
+  @include mixins.flex-row-gap(8px);
+}

@@ -1,0 +1,36 @@
+.categoryPage {
+  row-gap: 24px;
+
+  @include mixins.page-inline-padding;
+
+  & > * {
+    grid-column: 1 / -1;
+  }
+
+  // filter
+  &:not(:global(.error)) > :nth-child(2) {
+    @include mixins.responsive-property('margin-top', 12px, 16px, 16px);
+  }
+
+  // pagination
+  &:not(:global(.error)) > :last-child {
+    @include mixins.responsive-property('margin-top', 0, 16px, 16px);
+  }
+}
+
+.pageHeader {
+  display: flex;
+  flex-direction: column;
+
+  @include mixins.responsive-property('gap', 24px, 40px, 40px);
+}
+
+.pageTitle {
+  color: vars.$primary-color;
+}
+
+.modelCount {
+  color: vars.$secondary-color;
+  
+  @include mixins.responsive-property('margin-top', -16px, -32px, -32px);
+}

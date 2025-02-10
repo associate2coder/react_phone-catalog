@@ -1,0 +1,36 @@
+.container {
+  @include mixins.flex-row-gap(8px);
+
+  align-items: center;
+}
+
+.price {
+  @extend %h3;
+  
+  color: vars.$primary-color;
+}
+
+:global(.product-details-page) .price {
+  @extend %h2;
+}
+
+.oldPrice {
+  position: relative;
+  z-index: 1;
+  font-size: 22px;
+  line-height: 28px;
+  font-weight: 500;
+  color: vars.$secondary-color;
+}
+
+.oldPrice::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  top: 45%;
+  transform: translateY(-50%);
+  left: 0;
+  height: 2px;
+  background-color: vars.$secondary-color;
+  mix-blend-mode: vars.$mix-blend-mode;
+}

@@ -1,0 +1,14 @@
+.about {
+  display: grid;
+  row-gap: 32px;
+}
+
+.section {
+  color: vars.$primary-color;
+  display: grid;
+  row-gap: 16px;
+}
+
+.paragraph {
+  color: vars.$secondary-color;
+}

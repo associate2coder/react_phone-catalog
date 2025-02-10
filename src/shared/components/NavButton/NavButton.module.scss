@@ -1,0 +1,21 @@
+.navButton {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: vars.$bg-color;
+  box-shadow: -1px 1px 0 0 vars.$elements-color;
+
+  &:hover {
+    background-color: vars.$action-button-hover-color;
+
+    // &:has(:global(.icon)) > :global(.icon) {
+    //   @include mixins.pulse-animation;
+    // }
+  }
+
+  &:has(:global(.counter)) > :last-child {
+    position: absolute;
+  }
+}

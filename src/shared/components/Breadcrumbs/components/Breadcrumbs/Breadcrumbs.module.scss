@@ -1,0 +1,43 @@
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  color: vars.$secondary-color;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.wrapper {
+  height: 16px;
+  display: flex;
+  align-items: center;
+
+  & > :global(.icon):hover {
+    @include mixins.pulse-animation;
+  }
+}
+
+.text {
+  padding-block: 5px 1px;
+  line-height: 1;
+  color: vars.$secondary-color;
+}
+
+.link {
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+.link:hover {
+  color: vars.$primary-color;
+  transform: scale(1.1);
+}
+
+.backLink {
+  display: flex;
+  gap: 8px;
+  & > a {
+    color: vars.$back-link-color;
+  }
+}

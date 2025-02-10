@@ -1,0 +1,76 @@
+.dropdown {
+  position: relative;
+  min-width: 136px;
+  width: 42.5vw;
+}
+
+.label {
+  color: vars.$secondary-color;
+  margin-bottom: 4px;
+}
+
+.list {
+  background-color: vars.$dropdown-default-bg-color;
+  border: vars.$dropdown-default-border;
+  color: vars.$primary-color;
+
+  @include mixins.width-height(100%, 40px);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: 12px;
+
+  &:hover {
+    border: vars.$dropdown-hover-border;
+    cursor: pointer;
+  }
+
+  &:focus {
+    border: none;
+    outline: vars.$dropdown-focus-border;
+  }
+
+}
+
+.button {
+  border: none;
+  background-color: vars.$dropdown-default-bg-color;
+  background-position: center;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+
+  @include mixins.width-height(16px, 16px);
+}
+
+.buttonActive {
+  transform: rotate(-180deg);
+}
+
+.listContent {
+  padding-block: 8px;
+  width: 136px;
+  background-color: vars.$bg-color;
+  position: absolute;
+  top: 68px;
+  border: 1px solid #{vars.$elements-color};
+  box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.05);
+  z-index: 1;
+}
+
+.link {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  height: 32px;
+  color: vars.$secondary-color;
+
+  & > * {
+    padding: 12px;
+  }
+}
+
+.link:hover {
+  background-color: vars.$dropdown-default-bg-color;
+  color: vars.$primary-color;
+}

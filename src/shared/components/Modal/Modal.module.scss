@@ -1,0 +1,17 @@
+.modal {
+  @include mixins.flex-column-gap(16px);
+  @include mixins.page-inline-padding;
+  
+  padding-block: 32px;
+  background-color: vars.$bg-color;
+  color: vars.$primary-color;
+
+  border: vars.$footer-border;
+  box-shadow: vars.$footer-shadow;
+}
+
+:global(.overlay) .modalOverlay {
+  z-index: 9999; // Ensure it appears above everything
+}
+
+
