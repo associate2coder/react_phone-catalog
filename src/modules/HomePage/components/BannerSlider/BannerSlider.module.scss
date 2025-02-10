@@ -55,8 +55,8 @@
   display: flex;
   flex-wrap: nowrap;
   width: 100%;
-  object-fit: contain;
-
+  aspect-ratio: 1 / 1;
+  
   @include mixins.on-tablet {
     aspect-ratio: 2.6 / 1;
   }
